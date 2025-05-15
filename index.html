@@ -1,104 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rosso Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #ffffff;
-      color: #333333;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff6f6;
+      color: #4a3b3b;
     }
     header {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 40px 20px;
+      background-color: #fff0f0;
+      padding: 2rem;
       text-align: center;
+    }
+    header h1 {
       font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #b7410e;
+      margin: 0;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #f5f5f5;
-      padding: 15px;
+      gap: 2rem;
+      margin-top: 1rem;
     }
     nav a {
-      margin: 0 20px;
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #a00;
+      color: #b7410e;
+      font-weight: 600;
     }
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .sobre {
+      background-color: #ffeaea;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    .sobre h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #b7410e;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .produto {
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
       text-align: center;
     }
-    .portfolio img {
-      width: 300px;
-      margin: 15px;
-      border: 1px solid #ddd;
-      transition: transform 0.3s;
+    .produto img {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #ffeaea;
     }
-    .portfolio img:hover {
-      transform: scale(1.05);
+    .produto h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .produto p {
+      margin-bottom: 1rem;
+      padding: 0 1rem;
     }
     footer {
-      background-color: #000000;
-      color: #ffffff;
+      background-color: #fff0f0;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Rosso Studio</h1>
-    <p>Arte em madeira</p>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#portfolio">Produtos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-
   <section id="sobre">
-    <h2>Sobre</h2>
-    <p> 
-      Tudo começou com um vovô apaixonado por marcenaria e o desejo de criar algo especial para o seu neto. Surgiram, assim, os primeiros brinquedos montessorianos — feitos à mão, com cuidado, segurança e afeto.
-
-O encanto foi tanto que a família decidiu compartilhar essa experiência com outras pessoas, dando vida ao Rosso Studio: um ateliê dedicado à fabricação artesanal de brinquedos educativos inspirados na pedagogia Montessori e na abordagem Pikler.
-
-Aqui, cada peça é uma oportunidade de descoberta, autonomia e aprendizado — sempre com atenção aos detalhes, à estética e ao que realmente importa: o desenvolvimento saudável e feliz da infância.</p>
+    <div class="sobre">
+      <h2>Nossa história</h2>
+      <p>Tudo começou quando um vovô dedicado decidiu criar brinquedos Montessori cheios de carinho para o seu neto. O resultado foi tão especial que a família resolveu compartilhar essa magia com todo mundo. Assim nasceu a Rosso Studio: uma marca artesanal que fabrica brinquedos montessorianos com tecnologia Pikler, feitos à mão com cuidado e atenção, transformando aprendizados em memórias afetivas.</p>
+    </div>
   </section>
 
-  <section id="portfolio" class="portfolio">
-    <h2>Produtos</h2>
-    <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
-    <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
-    <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+  <section id="projetos">
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #b7410e;">Nossos projetos</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="https://via.placeholder.com/300x200?text=Brinquedo+1" alt="Brinquedo 1">
+        <h3>Arco Pikler</h3>
+        <p>Desenvolve equilíbrio, coordenação e imaginação.</p>
+      </div>
+      <div class="produto">
+        <img src="https://via.placeholder.com/300x200?text=Brinquedo+2" alt="Brinquedo 2">
+        <h3>Triângulo Montessori</h3>
+        <p>Estimula a autonomia e o movimento livre.</p>
+      </div>
+    </div>
   </section>
 
   <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato pelo Instagram <a href="https://instagram.com/rosso_studio10" target="_blank">@rosso_studio10</a> </p>
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #b7410e;">Contato</h2>
+    <p style="text-align:center;">Fale com a gente pelo Instagram: <a href="https://instagram.com/rosso_studio10" target="_blank">@rosso_studio10</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Rosso Studio. Todos os direitos reservados.</p>
+    © 2025 Rosso Studio. Feito com carinho.
   </footer>
 </body>
 </html>
